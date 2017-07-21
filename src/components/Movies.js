@@ -15,7 +15,10 @@ const Movie = ( {title, time, genres, metascore} ) => {
     <div>
       <h3>{title}</h3>
       <p>Time: {time}</p>
-      <p>Metascore: {metascore}</p>
+      { metascore &&
+        <p>Metascore: {metascore}</p>
+      }
+
       <p>Genres:</p>
       <ul>
         {genres.map(genre => <li>{genre}</li>)}
