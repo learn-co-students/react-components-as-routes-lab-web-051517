@@ -1,11 +1,26 @@
 import React from 'react';
-import { movies } from '../data';
+import {
+  movies
+} from '../data';
 
 const Movies = () => {
   return (
     <div>
-        {/*{code here}*/}
+      <h1>Movies Page</h1>
+      {movies.map(m => (
+        <div>
+          <h3>{m.title}</h3>
+          <p>Runtime: {m.time}</p>
+          <ul>
+            {m.genres.map(g => (
+              <li>{g}</li>
+            ))}
+          </ul>
+          <p>Metascore: {m.metascore}</p>
+        </div>
+    ))}
     </div>
+
   );
 };
 
